@@ -25,3 +25,6 @@ jobs:
             - name: Building Docker Image
               working-directory: ./frontend
               run: docker build -t frontend .
+
+            - name: Use Github Secrets
+              run: echo ${{ secrets.DOCKER_USERNAME }} && echo ${{ secrets.DOCKER_PASSWORD }}
